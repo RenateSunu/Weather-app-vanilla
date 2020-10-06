@@ -4,9 +4,21 @@ body {
 .weather-app {
   max-width: 600px;
   margin: 40px auto;
-  padding: 20px;
+}
+.wrapper {
   border: 3px solid #0069d9;
   border-radius: 10px;
+  padding: 20px;
+}
+.overview {
+  margin-bottom: 20px;
+}
+.weather-temperature img {
+  margin-right: 15px;
+}
+
+.weather-temperature strong {
+  font-size: 40px;
 }
 
 h1 {
