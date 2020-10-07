@@ -10,12 +10,12 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <title>Weather App</title>
   </head>
@@ -24,10 +24,10 @@
       <div class="weather-app">
         <div class="wrapper">
           <div class="overview">
-            <h1>New York</h1>
+            <h1 id="city"></h1>
             <ul>
               <li>Tuesday 21:00</li>
-              <li>clear</li>
+              <li id="description"></li>
             </ul>
           </div>
           <div class="row">
@@ -38,7 +38,9 @@
                   alt="partly_cloudy"
                 />
               </div>
-              <div class="weather-temperature"><strong>13</strong>°C |°F</div>
+              <div class="weather-temperature">
+                <strong id="temperature"></strong>°C |°F
+              </div>
             </div>
             <div class="col-6">
               <ul>
