@@ -33,14 +33,27 @@
           <div class="row">
             <div class="col-6">
               <div class="clearfix weather-temperature">
-                <img src="alt" ="partly_cloudy" id="icon" />
+                <img src="" class="partly_cloudy" id="icon" />
               </div>
+              <img src="" alt="" />
               <div class="weather-temperature">
-                <strong id="temperature"></strong>°C |°F
+                <strong id="temperature"></strong>°C
               </div>
             </div>
             <div class="col-6">
-              <ul>
+              <div class="row">
+                <div class="col-9">
+                <form id="search-form" class="mb-2">
+                  <input
+                    type="search"
+                    placeholder="Enter a City"
+                    class="form-control"
+                    id="city-input"
+                  /></div> 
+                  <div class="col-6">
+                  <input type="submit" value="search" class="btn btn-primary w-100 mb-5"/></div>
+                 </div></form>
+                 <ul>
                 <li>humidity <span id="humidity"></span>%</li>
                 <li>wind <span id="wind"></span>km/H</li>
               </ul>
