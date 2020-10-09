@@ -1,75 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Weather App</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="weather-app">
-        <div class="wrapper">
-          <div class="overview">
-            <h1 id="city"></h1>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="src/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet" />
+
+  <title>Weather App</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="weather-app">
+      <div class="wrapper">
+        <div class="overview">
+          <h1 id="city"></h1>
+          <ul>
+            <li>Last updated: <span id="date"></span></li>
+            <li id="description"></li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix weather-temperature">
+              <img src="" class="partly_cloudy" id="icon" />
+            </div>
+            <img src="" alt="" />
+            <div class="weather-temperature">
+              <strong id="temperature"></strong>°C
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="row">
+              <div class="col-9">
+                <form id="search-form" class="mb-2">
+                  <input type="search" placeholder="Enter a City" class="form-control" id="city-input" />
+              </div>
+              <div class="col-6">
+                <input type="submit" value="search" class="btn btn-primary w-100 mb-5" /></div>
+            </div>
+            </form>
             <ul>
-              <li>Last updated: <span id="date"></span></li>
-              <li id="description"></li>
+              <li>humidity <span id="humidity"></span>%</li>
+              <li>wind <span id="wind"></span>km/H</li>
             </ul>
           </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="clearfix weather-temperature">
-                <img src="" class="partly_cloudy" id="icon" />
-              </div>
-              <img src="" alt="" />
-              <div class="weather-temperature">
-                <strong id="temperature"></strong>°C
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="row">
-                <div class="col-9">
-                <form id="search-form" class="mb-2">
-                  <input
-                    type="search"
-                    placeholder="Enter a City"
-                    class="form-control"
-                    id="city-input"
-                  /></div> 
-                  <div class="col-6">
-                  <input type="submit" value="search" class="btn btn-primary w-100 mb-5"/></div>
-                 </div></form>
-                 <ul>
-                <li>humidity <span id="humidity"></span>%</li>
-                <li>wind <span id="wind"></span>km/H</li>
-              </ul>
-            </div>
-          </div>
         </div>
-        <small>
-          <a
-            href="https://github.com/RenateSunu/Weather-app-vanilla"
-            target="_blank"
-            >Open source code</a
-          >
-          by Renaté Sunu</small
-        >
+        <div class="row weather-forecast" id="forecast">
+          
+        </div>
       </div>
+      <small>
+        <a href="https://github.com/RenateSunu/Weather-app-vanilla" target="_blank">Open source code</a>
+        by Renaté Sunu</small>
     </div>
-    <script src="src/app.js"></script>
-  </body>
+  </div>
+  <script src="src/app.js"></script>
+</body>
+
 </html>
